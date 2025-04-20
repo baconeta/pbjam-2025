@@ -13,6 +13,7 @@ namespace Objects
         void EditorSpawnOne();
         void EditorReturnAll();
         void EditorClear();
+        Object GetPrefab();
 #endif
     }
 }

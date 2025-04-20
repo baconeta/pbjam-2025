@@ -20,8 +20,16 @@ namespace CustomEditor
 
             foreach (var pool in ObjectPoolManager.Instance.GetAllDebugPools())
             {
+                var iconContent = EditorGUIUtility.ObjectContent(pool.GetPrefab(), pool.GetPrefab().GetType());
+                
                 EditorGUILayout.BeginVertical("box");
-                EditorGUILayout.LabelField("Pool: " + pool.PoolName, EditorStyles.boldLabel);
+                
+                GUILayout.BeginHorizontal();
+                GUILayout.Label(iconContent.image, GUILayout.Width(32), GUILayout.Height(32));
+                GUILayout.Label(iconContent.text); // The prefab name
+                GUILayout.Label(pool.PoolName); // The script/component type
+                GUILayout.EndHorizontal();
+                
                 EditorGUILayout.ObjectField("Prefab", pool.Prefab, typeof(GameObject), false);
                 EditorGUILayout.LabelField("Total Objects", pool.TotalCount.ToString());
                 EditorGUILayout.LabelField("Active Objects", pool.ActiveCount.ToString());
@@ -32,23 +40,11 @@ namespace CustomEditor
 
                 // Buttons
                 EditorGUILayout.BeginHorizontal();
-
-                if (GUILayout.Button("Spawn One"))
-                {
-                    pool.EditorSpawnOne();
-                }
-
-                if (GUILayout.Button("Return All"))
-                {
-                    pool.EditorReturnAll();
-                }
-
-                if (GUILayout.Button("Clear"))
-                {
-                    pool.EditorClear();
-                }
-
+                if (GUILayout.Button("Spawn One")) pool.EditorSpawnOne();
+                if (GUILayout.Button("Return All")) pool.EditorReturnAll();
+                if (GUILayout.Button("Clear")) pool.EditorClear();
                 EditorGUILayout.EndHorizontal();
+                
                 EditorGUILayout.EndVertical();
             }
 

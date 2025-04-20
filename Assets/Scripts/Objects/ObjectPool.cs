@@ -78,6 +78,11 @@
             _objects.Clear();
             _allInstances.Clear();
         }
+        
+        public Object GetPrefab()
+        {
+            return _prefab;
+        }
 #endif
     }
 }
