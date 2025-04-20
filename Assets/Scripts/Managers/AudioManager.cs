@@ -27,7 +27,9 @@ namespace Managers
 
         private readonly Queue<CustomAudioSource> _pooledSources = new();
         private GameObject _audioPool;
-        
+
+        public AudioMixer MasterMixer => masterMixer;
+
         /// <summary>
         /// Plays a sound clip either once or looping.
         /// If no preset CustomAudioSource is provided, one will be instantiated (or pulled from pool if pooling is enabled).
@@ -105,9 +107,9 @@ namespace Managers
             float sfxVol = PlayerPrefs.GetFloat(SfxKey, 0.5f);
             float ambientVol = PlayerPrefs.GetFloat(AmbientKey, 0.5f);
 
-            masterMixer.SetFloat(VolumeSettings.MixerMusic, SafeLogVolume(musicVol));
-            masterMixer.SetFloat(VolumeSettings.SfxMusic, SafeLogVolume(sfxVol));
-            masterMixer.SetFloat(VolumeSettings.AmbientMusic, SafeLogVolume(ambientVol));
+            MasterMixer.SetFloat(VolumeSettings.MixerMusic, SafeLogVolume(musicVol));
+            MasterMixer.SetFloat(VolumeSettings.SfxMusic, SafeLogVolume(sfxVol));
+            MasterMixer.SetFloat(VolumeSettings.AmbientMusic, SafeLogVolume(ambientVol));
         }
         
         private void RecycleSource(CustomAudioSource source)
