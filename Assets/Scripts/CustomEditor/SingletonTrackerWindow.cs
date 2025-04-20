@@ -33,16 +33,16 @@
                 EditorGUI.DrawRect(new Rect(boxRect.x, boxRect.y, boxRect.width, 68), boxColor * 0.15f);
 
                 EditorGUILayout.LabelField("Type", type.FullName, EditorStyles.boldLabel);
-                EditorGUILayout.ObjectField("Instance", singleton as UnityEngine.Object, typeof(UnityEngine.Object),
+                EditorGUILayout.ObjectField("Instance", singleton, typeof(UnityEngine.Object),
                     true);
 
                 GUILayout.BeginHorizontal();
                 if (GUILayout.Button("Ping"))
-                    EditorGUIUtility.PingObject(singleton as UnityEngine.Object);
+                    EditorGUIUtility.PingObject(singleton);
 
                 if (GUILayout.Button("Reset"))
                 {
-                    MethodInfo reset = type.GetMethod("ResetInstance", BindingFlags.Public | BindingFlags.Static);
+                    MethodInfo reset = type.GetMethod("ResetInstance", BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy);
                     if (reset != null)
                         reset.Invoke(null, null);
                     else
