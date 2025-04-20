@@ -28,7 +28,7 @@ namespace Analytics
 
             // The ‘analyticStartedName’ event will get cached locally 
             //and sent during the next scheduled upload, within 1 minute
-            AnalyticsService.Instance.CustomData(analyticStartedName);
+            AnalyticsService.Instance.RecordEvent(analyticStartedName);
 
             // You can call Events.Flush() to send the event immediately
             AnalyticsService.Instance.Flush();
@@ -52,7 +52,7 @@ namespace Analytics
                 {analyticEndTimeName, timeSinceStart}
             };
 
-            AnalyticsService.Instance.CustomData(analyticEndedName, parameters);
+            AnalyticsService.Instance.RecordEvent(analyticEndedName); // TODO removed params here as Event system for analytics was changed in SDK 5.1
             AnalyticsService.Instance.Flush();
         }
     }
