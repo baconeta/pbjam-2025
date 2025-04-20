@@ -68,7 +68,7 @@ namespace CustomEditor
                 Managers.AudioManager.Instance.MasterMixer.FindMatchingGroups(string.Empty); // Get all groups
 
             var options = new List<string> { "All" };
-            options.AddRange(mixerGroups.Select(group => group.name));
+            options.AddRange(from @group in mixerGroups where @group.name != "Master" select @group.name);
 
             return options.ToArray();
         }
