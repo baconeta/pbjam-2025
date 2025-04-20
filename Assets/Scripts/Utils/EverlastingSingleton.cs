@@ -45,5 +45,16 @@ namespace Utils
                 Destroy(gameObject);
             }
         }
+
+#if UNITY_EDITOR
+        /// <summary>
+        /// Editor/debug-only method to reset the singleton instance manually.
+        /// Useful when reloading scenes or testing.
+        /// </summary>
+        public static void ResetInstance()
+        {
+            _instance = null;
+        }
+#endif
     }
 }
