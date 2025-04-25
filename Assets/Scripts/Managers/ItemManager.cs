@@ -8,13 +8,14 @@ namespace Managers
 {
     public class ItemManager : Singleton<ItemManager>
     {
-        public List<Item> itemPool;
+        [Tooltip("This should contain all items we want to search by tags")]
+        public List<Item> genericItemPool;
 
         public List<Item> GenerateItemsForCharacter(CharacterData character)
         {
-            List<Item> joySparksItems = itemPool.Where(i  => character.likedItems.Contains(i)).ToList();
-            List<Item> joyNoSparksItems = itemPool.Where(i  => character.hatedItems.Contains(i)).ToList();
-            List<Item> joyNoSparksTags = itemPool.Where(i => i.tags.Any(t => character.dislikedTags.Contains(t))).ToList();
+            List<Item> joySparksItems = character.likedItems;
+            List<Item> joyNoSparksItems = character.hatedItems;
+            List<Item> joyNoSparksTags = genericItemPool.Where(i => i.tags.Any(t => character.dislikedTags.Contains(t))).ToList();
 
             var mixed = new List<Item>();
             

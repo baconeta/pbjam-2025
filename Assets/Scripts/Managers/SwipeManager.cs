@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using GameObjects;
+using GameUI;
 using ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,6 +12,7 @@ namespace Managers
     {
         public UnityEvent<Item, bool> onItemSwiped;
         public GameObject defaultItemCardObject;
+        public GameObject instantiationParent;
 
         private Queue<Item> _itemQueue;
 
@@ -29,10 +31,11 @@ namespace Managers
             }
 
             var item = _itemQueue.Dequeue();
-            var card = Instantiate(defaultItemCardObject).GetComponent<ItemCard>();
+            var card = Instantiate(defaultItemCardObject, instantiationParent.transform).GetComponent<ItemCard>();
             card.Setup(item);
-            card.onSwipedLeft.AddListener(() => onItemSwiped.Invoke(item, false));
-            card.onSwipedRight.AddListener(() => onItemSwiped.Invoke(item, true));
+            var swiperSystem = card.GetComponent<Swiper>();
+            swiperSystem.onSwipedLeft.AddListener(() => onItemSwiped.Invoke(item, false));
+            swiperSystem.onSwipedRight.AddListener(() => onItemSwiped.Invoke(item, true));
         }
     }
 }

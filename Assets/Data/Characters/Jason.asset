@@ -25,9 +25,14 @@ MonoBehaviour:
   likedItems:
   - {fileID: 11400000, guid: 0ab61d2fc4beeb64788d15f12b48168a, type: 2}
   - {fileID: 11400000, guid: c533ae02c17169a4b88884a40acaddd9, type: 2}
+  - {fileID: 11400000, guid: c533ae02c17169a4b88884a40acaddd9, type: 2}
+  - {fileID: 11400000, guid: 0ab61d2fc4beeb64788d15f12b48168a, type: 2}
   hatedItems:
   - {fileID: 11400000, guid: d98311a060d1cf247a843a1bf18649be, type: 2}
-  - {fileID: 11400000, guid: c533ae02c17169a4b88884a40acaddd9, type: 2}
+  - {fileID: 11400000, guid: d98311a060d1cf247a843a1bf18649be, type: 2}
+  - {fileID: 11400000, guid: c2a496790dba3b74abad92f57f31692f, type: 2}
+  - {fileID: 11400000, guid: c2a496790dba3b74abad92f57f31692f, type: 2}
+  - {fileID: 11400000, guid: d98311a060d1cf247a843a1bf18649be, type: 2}
   dislikedTags:
   - food
   minimumGoodItems: 1

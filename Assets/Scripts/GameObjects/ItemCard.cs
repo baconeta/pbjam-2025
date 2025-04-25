@@ -1,7 +1,6 @@
 ﻿using ScriptableObjects;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace GameObjects
@@ -14,14 +13,12 @@ namespace GameObjects
 
         [HideInInspector] public Item data;
 
-        public UnityEvent onSwipedLeft;
-        public UnityEvent onSwipedRight;
-
         public void Setup(Item item)
         {
+            Debug.Log("Setting up " + item.itemName);
             data = item;
-            iconImage.sprite = item.icon;
-            nameText.text = item.itemName;
+            if (iconImage != null) iconImage.sprite = item.icon;
+            if (nameText != null) nameText.text = item.itemName;
         }
     }
 }
