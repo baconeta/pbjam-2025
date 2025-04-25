@@ -26,14 +26,12 @@ namespace GameUI
             _canvasGroup = GetComponent<CanvasGroup>();
             if (!_canvasGroup) _canvasGroup = gameObject.AddComponent<CanvasGroup>();
 
-            var playManager = FindFirstObjectByType<PlayManager>();
-            if (!playManager)
+            var swipeManager = FindFirstObjectByType<SwipeManager>();
+            if (!swipeManager)
             {
                 Debug.LogError("No play manager found - Swipe card not setup correctly");
                 return;
             }
-
-            playManager.CurrentCard = this;
         }
 
         private void Start()
