@@ -7,47 +7,59 @@ namespace Managers
 {
     public class ScoreManager : Singleton<ScoreManager>
     {
+        private ScoringData _scoringData;
         public int score = 0;
-        public float scoredGainedForSparkingJoy = 10;
-        public float scoreLostForVeryBadChoice = 10;
-        public float scoreLostForMissingSparkItem = 5;
-        public float scoreGainedForThrowingAwayBadItem = 5;
-        public float scoreLostForKeepingNeutralItem = 5;
-        public float scoreGainedForDiscardingNeutralItem = 2;
+
+        private void Start()
+        {
+            _scoringData = GetComponent<ScoringData>();
+            if (_scoringData == null)
+            {
+                Debug.LogWarning("ScoreManager: _scoringData is null");
+            }
+        }
 
         public void ProcessChoice(Item item, bool kept, CharacterData character)
         {
+            if (_scoringData == null)
+            {
+                Debug.LogWarning("ScoreManager: _scoringData is null - no score gained");
+                return;
+            }
+            
             float scoreFromThisItem = 0;
             bool joySparks = character.likedItems.Contains(item);
             bool joyReallyNoSparks = character.hatedItems.Contains(item) ||
-                                     item.tags.Any(s => character.dislikedTags.Contains(s));;
+                                     item.tags.Any(s => character.dislikedTags.Contains(s));
 
             switch (kept)
             {
                 // if kept, handle scoring
                 case true when joySparks:
-                    scoreFromThisItem += scoredGainedForSparkingJoy;
+                    scoreFromThisItem += _scoringData.scoredGainedForSparkingJoy;
                     break;
                 case true when joyReallyNoSparks:
-                    scoreFromThisItem -= scoreLostForVeryBadChoice;
+                    scoreFromThisItem -= _scoringData.scoreLostForVeryBadChoice;
                     break;
                 // if not kept, handle scoring
                 case false when joySparks:
-                    scoreFromThisItem -= scoreLostForMissingSparkItem;
+                    scoreFromThisItem -= _scoringData.scoreLostForMissingSparkItem;
                     break;
                 case false when joyReallyNoSparks:
-                    scoreFromThisItem += scoreGainedForThrowingAwayBadItem;
+                    scoreFromThisItem += _scoringData.scoreGainedForThrowingAwayBadItem;
                     break;
                 // neutral cases for both scenarios
                 case true: // kept neutral item
-                    scoreFromThisItem -= scoreLostForKeepingNeutralItem;
+                    scoreFromThisItem -= _scoringData.scoreLostForKeepingNeutralItem;
                     break;
                 default: // not kept neutral item
-                    scoreFromThisItem += scoreGainedForDiscardingNeutralItem;
+                    scoreFromThisItem += _scoringData.scoreGainedForDiscardingNeutralItem;
                     break;
             }
 
             Debug.Log(scoreFromThisItem);
+            
+            score += Mathf.FloorToInt(scoreFromThisItem);
         }
     }
 }

@@ -4,11 +4,20 @@ using UnityEngine.UI;
 
 namespace ScriptableObjects
 {
+    [CreateAssetMenu(fileName = "Character", menuName = "Character Data")]
     [System.Serializable]
     public class CharacterData :ScriptableObject
     {
+        [Header("Character Info")]
         public string characterName;
         public Image characterPortrait;
+        public int age;
+        public string gender;
+        [TextArea(3,10)] public string bio;
+        [TextArea(2,4)]public string hobbies;
+        [TextArea(3,10)]public string aboutMeToMarie;
+        public string funFact;
+        public string nicknames;
         
         [Header("Items Lists for this character")]
         [Tooltip("Specific Items this character likes")]
@@ -27,7 +36,7 @@ namespace ScriptableObjects
         public int minimumBadItems;
         [Tooltip("Maximum specifically bad items to take")]
         public int maximumBadItems;
-        [Tooltip("MaxTaggedItems")]
-        public int maxTaggedItems;
+        [Tooltip("MaxDislikedTaggedItems")]
+        public int maxDislikedTaggedItems;
     }
 }

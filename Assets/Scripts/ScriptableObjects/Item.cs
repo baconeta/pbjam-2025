@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ScriptableObjects
 {
-    [CreateAssetMenu(fileName = "Item", menuName = "Scriptable Objects/Item")]
+    [CreateAssetMenu(fileName = "Item", menuName = "Item Data")]
     [Serializable]
     public class Item : ScriptableObject
     {
