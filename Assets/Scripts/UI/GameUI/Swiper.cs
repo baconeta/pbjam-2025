@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Managers;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
@@ -6,14 +7,15 @@ namespace GameUI
 {
     public class Swiper : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
     {
-        [Header("Swipe Settings")] public float swipeThreshold = 150f;
+        [Header("Swipe Settings")] 
+        public float swipeThreshold = 150f;
         public float returnSpeed = 10f;
 
-        [Header("Events")] public UnityEvent onSwipedLeft;
+        [Header("Events")] 
+        public UnityEvent onSwipedLeft;
         public UnityEvent onSwipedRight;
 
         private Vector3 _initialPosition;
-        private Quaternion _initialRotation;
         private RectTransform _rectTransform;
         private CanvasGroup _canvasGroup;
         private bool _isReturning;
@@ -23,12 +25,20 @@ namespace GameUI
             _rectTransform = GetComponent<RectTransform>();
             _canvasGroup = GetComponent<CanvasGroup>();
             if (!_canvasGroup) _canvasGroup = gameObject.AddComponent<CanvasGroup>();
+
+            var playManager = FindFirstObjectByType<PlayManager>();
+            if (!playManager)
+            {
+                Debug.LogError("No play manager found - Swipe card not setup correctly");
+                return;
+            }
+
+            playManager.CurrentCard = this;
         }
 
         private void Start()
         {
             _initialPosition = _rectTransform.anchoredPosition;
-            _initialRotation = _rectTransform.rotation;
         }
 
         public void OnBeginDrag(PointerEventData eventData)
