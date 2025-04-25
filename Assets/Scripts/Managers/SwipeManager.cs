@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using GameObjects;
 using GameUI;
 using ScriptableObjects;
@@ -15,6 +16,23 @@ namespace Managers
         public GameObject instantiationParent;
 
         private Queue<Item> _itemQueue;
+        // ReSharper disable once InconsistentNaming
+        private ItemCard _currentCardGO;
+
+        private void OnEnable()
+        {
+            ScoreManager.Instance.onScoreProcessed.AddListener(NewCard);
+        }
+
+        private void NewCard(int currentScore)
+        {
+            if (_currentCardGO)
+            {
+                Destroy(_currentCardGO.gameObject);
+            }
+            
+            ShowNextItem();
+        }
 
         public void ShowItems(List<Item> items)
         {
@@ -31,9 +49,9 @@ namespace Managers
             }
 
             var item = _itemQueue.Dequeue();
-            var card = Instantiate(defaultItemCardObject, instantiationParent.transform).GetComponent<ItemCard>();
-            card.Setup(item);
-            var swiperSystem = card.GetComponent<Swiper>();
+            _currentCardGO = Instantiate(defaultItemCardObject, instantiationParent.transform).GetComponent<ItemCard>();
+            _currentCardGO.Setup(item);
+            var swiperSystem = _currentCardGO.GetComponent<Swiper>();
             swiperSystem.onSwipedLeft.AddListener(() => onItemSwiped.Invoke(item, false));
             swiperSystem.onSwipedRight.AddListener(() => onItemSwiped.Invoke(item, true));
         }

@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Events;
 using Utils;
 
 namespace Managers
@@ -12,6 +13,8 @@ namespace Managers
     {
         private ScoringData _scoringData;
         public int score = 0;
+
+        public UnityEvent<int> onScoreProcessed;
 
         private void Start()
         {
@@ -29,9 +32,9 @@ namespace Managers
                 Debug.LogWarning("ScoreManager: _scoringData is null - no score gained");
                 return;
             }
-            
+
             float scoreFromThisItem = 0;
-            
+
             bool joySparks = character.likedItems.Contains(item);
             bool joyReallyNoSparks = character.hatedItems.Contains(item) ||
                                      item.tags.Any(s => character.dislikedTags.Contains(s));
@@ -62,8 +65,12 @@ namespace Managers
             }
 
             Debug.Log(scoreFromThisItem);
-            
+
             score += Mathf.FloorToInt(scoreFromThisItem);
+            
+            Debug.Log("New current total score: " + score);
+
+            onScoreProcessed.Invoke(score);
         }
     }
 }
