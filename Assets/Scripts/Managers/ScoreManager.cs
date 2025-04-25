@@ -5,6 +5,9 @@ using Utils;
 
 namespace Managers
 {
+    /// <summary>
+    /// Holds and handles the scores for this round/level
+    /// </summary>
     public class ScoreManager : Singleton<ScoreManager>
     {
         private ScoringData _scoringData;
@@ -28,6 +31,7 @@ namespace Managers
             }
             
             float scoreFromThisItem = 0;
+            
             bool joySparks = character.likedItems.Contains(item);
             bool joyReallyNoSparks = character.hatedItems.Contains(item) ||
                                      item.tags.Any(s => character.dislikedTags.Contains(s));

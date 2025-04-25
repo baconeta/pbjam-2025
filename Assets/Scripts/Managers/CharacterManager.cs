@@ -7,6 +7,7 @@ namespace Managers
 {
     public class CharacterManager : Singleton<CharacterManager>
     {
+        [Tooltip("Characters available in this level")]
         public List<CharacterData> characters;
         public CharacterData CurrentCharacter { get; private set; }
 
