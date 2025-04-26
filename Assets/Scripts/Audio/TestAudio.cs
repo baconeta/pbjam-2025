@@ -36,14 +36,12 @@ namespace Audio
 
         public void TestSfxLooping()
         {
-            if (_sfx) _sfx.StopAudio();
             _sfx = audioManager.Play(testSfx, sfxMixerGroup);
         }
 
         public void TestSfxOnce()
         {
-            if (_sfx) _sfx.StopAudio();
-            _sfx = audioManager.Play(testSfx, sfxMixerGroup, false);
+            audioManager.Play(testSfx, sfxMixerGroup, false);
         }
 
         public void TestAmbientLooping()
