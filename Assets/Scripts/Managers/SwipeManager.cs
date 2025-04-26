@@ -14,6 +14,8 @@ namespace Managers
         public UnityEvent<Item, bool> onItemSwiped;
         public GameObject defaultItemCardObject;
         public GameObject instantiationParent;
+        
+        private float _timeItemFirstShown;
 
         private Queue<Item> _itemQueue;
         // ReSharper disable once InconsistentNaming
@@ -45,6 +47,8 @@ namespace Managers
             if (_itemQueue.Count == 0)
             {
                 Debug.Log("All items swiped");
+                // Tell the game manager that the level is over
+                GameManager.Instance.EndLevel();
                 return;
             }
 
@@ -54,6 +58,13 @@ namespace Managers
             var swiperSystem = _currentCardGO.GetComponent<Swiper>();
             swiperSystem.onSwipedLeft.AddListener(() => onItemSwiped.Invoke(item, false));
             swiperSystem.onSwipedRight.AddListener(() => onItemSwiped.Invoke(item, true));
+
+            _timeItemFirstShown = Time.time;
+        }
+
+        public float GetTimeItemOnScreen()
+        {
+            return Time.time - _timeItemFirstShown;
         }
     }
 }

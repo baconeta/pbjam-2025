@@ -2,19 +2,20 @@
 using ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Events;
-using Utils;
 
 namespace Managers
 {
     /// <summary>
     /// Holds and handles the scores for this round/level
     /// </summary>
-    public class ScoreManager : Singleton<ScoreManager>
+    public class ScoreManager : Utils.Singleton<ScoreManager>
     {
-        private ScoringData _scoringData;
         public int score = 0;
-
         public UnityEvent<int> onScoreProcessed;
+
+        
+
+        private ScoringData _scoringData;
 
         private void Start()
         {
@@ -64,13 +65,40 @@ namespace Managers
                     break;
             }
 
-            Debug.Log(scoreFromThisItem);
-
-            score += Mathf.FloorToInt(scoreFromThisItem);
+            Debug.Log("Base score gained " + (scoreFromThisItem * _scoringData.overallMultiplier));
+            scoreFromThisItem = HandleMultiplierForTimeSpent(scoreFromThisItem);
+            Debug.Log("Time affected score gained: " + scoreFromThisItem);
             
+            score += Mathf.FloorToInt(scoreFromThisItem);
             Debug.Log("New current total score: " + score);
 
             onScoreProcessed.Invoke(score);
+        }
+
+        private float HandleMultiplierForTimeSpent(float scoreFromThisItem)
+        {
+            var timeShownOnScreen = SwipeManager.Instance.GetTimeItemOnScreen();
+            return scoreFromThisItem * GetScoreTimeMultiplier(timeShownOnScreen);
+        }
+
+        private float GetScoreTimeMultiplier(float timeTaken)
+        {
+            float maxMultiplier = _scoringData.maxTimeMultiplier;
+            float minMultiplier = _scoringData.minTimeMultiplier;
+            float timeToMin = _scoringData.timeToMin; 
+            float curveStrength = _scoringData.timeMultiplierCurveStrength; 
+
+            // Clamp time to be within 0 and timeToMin
+            timeTaken = Mathf.Clamp(timeTaken, 0f, timeToMin);
+
+            // Normalized inverse time (1 = instant, 0 = max time)
+            float normalized = 1f - (timeTaken / timeToMin);
+
+            // Sharpen curve
+            float curved = Mathf.Pow(normalized, curveStrength);
+
+            // Lerp between min and max multipliers
+            return Mathf.Lerp(minMultiplier, maxMultiplier, curved);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ScriptableObjects;
+using UnityEngine;
 using Utils;
 
 namespace Managers
@@ -27,6 +28,12 @@ namespace Managers
         private void HandleSwipe(Item item, bool kept)
         {
             scoreManager.ProcessChoice(item, kept, characterManager.CurrentCharacter);
+        }
+
+        public void EndLevel()
+        {
+            Debug.Log("Ending level");
+            Debug.Log("The final score was " + scoreManager.score);
         }
     }
 }
