@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using CustomEditor;
+﻿using System.Collections.Generic;
+using Editor;
 using GameObjects;
 using GameUI;
 using ScriptableObjects;
