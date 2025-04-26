@@ -12,9 +12,7 @@ namespace Managers
     {
         public int score = 0;
         public UnityEvent<int> onScoreProcessed;
-
         
-
         private ScoringData _scoringData;
 
         private void Start()
@@ -65,7 +63,12 @@ namespace Managers
                     break;
             }
 
-            Debug.Log("Base score gained " + (scoreFromThisItem * _scoringData.overallMultiplier));
+            scoreFromThisItem *= _scoringData.overallMultiplier;
+            Debug.Log("Base score gained " + scoreFromThisItem);
+
+            scoreFromThisItem = NormaliseBaseScore(scoreFromThisItem);
+            Debug.Log("Normalised score gained " + scoreFromThisItem);
+            
             scoreFromThisItem = HandleMultiplierForTimeSpent(scoreFromThisItem);
             Debug.Log("Time affected score gained: " + scoreFromThisItem);
             
@@ -99,6 +102,13 @@ namespace Managers
 
             // Lerp between min and max multipliers
             return Mathf.Lerp(minMultiplier, maxMultiplier, curved);
+        }
+
+        private float NormaliseBaseScore(float currentScore)
+        {
+            var normalisedMultiplier =
+                (float) _scoringData.scoresNormaliseToXItems / SwipeManager.Instance.totalItemsInThisRound;
+            return normalisedMultiplier * currentScore;
         }
     }
 }

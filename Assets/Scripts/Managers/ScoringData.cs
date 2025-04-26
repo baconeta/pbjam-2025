@@ -19,6 +19,11 @@ namespace Managers
         public float timeMultiplierCurveStrength = 2f;
 
         [Header("Overall multiplier for funner big numbers")]
-        public float overallMultiplier;
+        public float overallMultiplier = 1f;
+
+        [Header("Other variables")] 
+        [Tooltip("If we have scores normalised around a certain number of items being shown," +
+                 "we can mitigate random chance being a huge driver of score difference")]
+        public int scoresNormaliseToXItems = 8;
     }
 }

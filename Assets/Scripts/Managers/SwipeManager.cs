@@ -16,8 +16,9 @@ namespace Managers
         public GameObject instantiationParent;
         
         private float _timeItemFirstShown;
-
+        public int totalItemsInThisRound;
         private Queue<Item> _itemQueue;
+        
         // ReSharper disable once InconsistentNaming
         private ItemCard _currentCardGO;
 
@@ -38,6 +39,7 @@ namespace Managers
 
         public void ShowItems(List<Item> items)
         {
+            totalItemsInThisRound = items.Count;
             _itemQueue = new Queue<Item>(items);
             ShowNextItem();
         }

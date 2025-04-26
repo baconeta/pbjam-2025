@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  onScoreProcessed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3173131878167992949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,3 +67,8 @@ MonoBehaviour:
   scoreGainedForThrowingAwayBadItem: 5
   scoreLostForKeepingNeutralItem: 5
   scoreGainedForDiscardingNeutralItem: 2
+  maxTimeMultiplier: 5
+  minTimeMultiplier: 0.8
+  timeToMin: 8
+  timeMultiplierCurveStrength: 2
+  overallMultiplier: 100
