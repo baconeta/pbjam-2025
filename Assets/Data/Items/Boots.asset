@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Boots
   m_EditorClassIdentifier: 
   itemName: Boots
-  icon: {fileID: 0}
+  icon: {fileID: 7902364575885455685, guid: c72778834eebdea42b7fa4e4ea3c669c, type: 3}
   tags: []

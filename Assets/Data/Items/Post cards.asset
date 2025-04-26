@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Post cards
   m_EditorClassIdentifier: 
   itemName: Post cards
-  icon: {fileID: 0}
+  icon: {fileID: 6812633529390610976, guid: 109954ef46cee5c47bb8c65e213a8b08, type: 3}
   tags: []

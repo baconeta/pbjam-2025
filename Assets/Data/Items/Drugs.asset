@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1d0a1b8674438d409b486fa730deff8, type: 3}
-  m_Name: Vinylpop
+  m_Name: Drugs
   m_EditorClassIdentifier: 
-  itemName: Vinyl
-  icon: {fileID: -3487217871508907290, guid: de340ea8f481735448b6544418c64426, type: 3}
+  itemName: Rolled joint
+  icon: {fileID: -8433845063711005578, guid: 473de5dff469ab64b8efef9d219e00a5, type: 3}
   tags: []

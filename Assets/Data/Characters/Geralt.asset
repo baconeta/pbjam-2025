@@ -25,11 +25,17 @@ MonoBehaviour:
     left a foul taste or clouded the mind.\r\n"
   funFact: 
   nicknames: 
-  likedItems: []
-  hatedItems: []
+  likedItems:
+  - {fileID: 11400000, guid: 8ec0ebc7f80f8684ba89f1447dfb7552, type: 2}
+  - {fileID: 11400000, guid: 82ba68169fb2c1d4ab2092ab41623baf, type: 2}
+  - {fileID: 11400000, guid: 8773ef1d986e3e643b785f173813e9ef, type: 2}
+  - {fileID: 11400000, guid: 5b967225cf7028d419910ed44d6078b7, type: 2}
+  hatedItems:
+  - {fileID: 11400000, guid: 79406f25018719b46921e1f5a5f8b478, type: 2}
+  - {fileID: 11400000, guid: d4a6adecac0e70a4983cd26799e33ceb, type: 2}
   dislikedTags: []
-  minimumGoodItems: 0
-  maximumGoodItems: 0
-  minimumBadItems: 0
-  maximumBadItems: 0
+  minimumGoodItems: 2
+  maximumGoodItems: 3
+  minimumBadItems: 1
+  maximumBadItems: 2
   maxDislikedTaggedItems: 0

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Joint and tray
   m_EditorClassIdentifier: 
   itemName: Joint/Tray
-  icon: {fileID: 0}
+  icon: {fileID: -8433845063711005578, guid: 473de5dff469ab64b8efef9d219e00a5, type: 3}
   tags: []

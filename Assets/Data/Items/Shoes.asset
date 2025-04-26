@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1d0a1b8674438d409b486fa730deff8, type: 3}
-  m_Name: Vinylpop
+  m_Name: Shoes
   m_EditorClassIdentifier: 
-  itemName: Vinyl
-  icon: {fileID: -3487217871508907290, guid: de340ea8f481735448b6544418c64426, type: 3}
+  itemName: Shoes
+  icon: {fileID: 7902364575885455685, guid: c72778834eebdea42b7fa4e4ea3c669c, type: 3}
   tags: []

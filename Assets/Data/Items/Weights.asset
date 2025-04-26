@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Weights
   m_EditorClassIdentifier: 
   itemName: Weights
-  icon: {fileID: 0}
+  icon: {fileID: 6486328592684853126, guid: bc8a1c087c59e3643a459c87c870fc45, type: 3}
   tags: []

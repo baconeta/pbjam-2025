@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Controller
   m_EditorClassIdentifier: 
   itemName: Controller
-  icon: {fileID: 0}
+  icon: {fileID: -1755888850900523647, guid: e1e43b7e32e4eca459d6cc25c21fb72b, type: 3}
   tags: []

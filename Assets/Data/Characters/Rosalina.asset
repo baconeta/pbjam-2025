@@ -25,11 +25,18 @@ MonoBehaviour:
     preferred bare floors and quiet rooms, no tiny footsteps, no scattered clutter.\r\n"
   funFact: 
   nicknames: 
-  likedItems: []
-  hatedItems: []
-  dislikedTags: []
-  minimumGoodItems: 0
-  maximumGoodItems: 0
-  minimumBadItems: 0
-  maximumBadItems: 0
+  likedItems:
+  - {fileID: 11400000, guid: d44a8b16b480fbd4db34795cf2eda340, type: 2}
+  - {fileID: 11400000, guid: 6ac56fd64ead6ef4ea4c626f23201705, type: 2}
+  - {fileID: 11400000, guid: 2cb69e0e094937d4087404fe2e7fc3e3, type: 2}
+  - {fileID: 11400000, guid: 5330c8e865ff70b43885eef512ca2e5e, type: 2}
+  hatedItems:
+  - {fileID: 11400000, guid: 827ea97444b8482489fae5926c1ac5d2, type: 2}
+  - {fileID: 11400000, guid: 7a12f5e447b99c443880c22988c24878, type: 2}
+  dislikedTags:
+  - 
+  minimumGoodItems: 2
+  maximumGoodItems: 3
+  minimumBadItems: 1
+  maximumBadItems: 2
   maxDislikedTaggedItems: 0

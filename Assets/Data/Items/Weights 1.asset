@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1d0a1b8674438d409b486fa730deff8, type: 3}
-  m_Name: Vinylpop
+  m_Name: Weights 1
   m_EditorClassIdentifier: 
-  itemName: Vinyl
-  icon: {fileID: -3487217871508907290, guid: de340ea8f481735448b6544418c64426, type: 3}
+  itemName: Weights
+  icon: {fileID: 6486328592684853126, guid: bc8a1c087c59e3643a459c87c870fc45, type: 3}
   tags: []

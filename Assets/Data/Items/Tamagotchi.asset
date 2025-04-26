@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Tamagotchi
   m_EditorClassIdentifier: 
   itemName: Tamagotchi
-  icon: {fileID: 0}
+  icon: {fileID: 2972234232071576551, guid: 63b049b0aaa03ea4ca9270d5c009783d, type: 3}
   tags: []

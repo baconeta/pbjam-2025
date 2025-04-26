@@ -25,11 +25,17 @@ MonoBehaviour:
     much movement.\r\n"
   funFact: 
   nicknames: 
-  likedItems: []
-  hatedItems: []
+  likedItems:
+  - {fileID: 11400000, guid: 945cdb245cf690b498159f7acc7e9c0f, type: 2}
+  - {fileID: 11400000, guid: 8b49527c3c096614bb2e359c1f57d148, type: 2}
+  - {fileID: 11400000, guid: e9dec554230bc3545b194413a5ba8c82, type: 2}
+  - {fileID: 11400000, guid: e4030dfb13aa23844b9d24b496766f4a, type: 2}
+  hatedItems:
+  - {fileID: 11400000, guid: f51b1ff768106f94c81bc962ba61b8c3, type: 2}
+  - {fileID: 11400000, guid: 5778bd65b4116024fb0368407e5d0386, type: 2}
   dislikedTags: []
-  minimumGoodItems: 0
-  maximumGoodItems: 0
-  minimumBadItems: 0
-  maximumBadItems: 0
+  minimumGoodItems: 2
+  maximumGoodItems: 3
+  minimumBadItems: 1
+  maximumBadItems: 2
   maxDislikedTaggedItems: 0

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Painting
   m_EditorClassIdentifier: 
   itemName: Painting
-  icon: {fileID: 0}
+  icon: {fileID: 7518132026514195565, guid: 77f3508aac86d5b4ea6b071da06ddf1b, type: 3}
   tags: []
