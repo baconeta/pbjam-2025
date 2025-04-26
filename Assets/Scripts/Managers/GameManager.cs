@@ -1,4 +1,5 @@
 ﻿using ScriptableObjects;
+using UI.StateSwitcher;
 using UnityEngine;
 using Utils;
 
@@ -10,11 +11,11 @@ namespace Managers
         public ScoreManager scoreManager;
         public SwipeManager swipeController;
         public ItemManager itemManager;
-        public GameObject dialogueSystem;
+        public CompositeStateSwitcher gameUISwitcher;
 
         public void StartLevel()
         {
-            dialogueSystem.SetActive(false);
+            gameUISwitcher.ChangeState("Running");
             
             characterManager.LoadRandomCharacter();
             var items = itemManager.GenerateItemsForCharacter(characterManager.CurrentCharacter);
@@ -32,6 +33,7 @@ namespace Managers
         {
             Debug.Log("Ending level");
             Debug.Log("The final score was " + scoreManager.score);
+            gameUISwitcher.ChangeState("End");
         }
     }
 }
