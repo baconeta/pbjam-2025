@@ -10,14 +10,12 @@ namespace Managers
         public ScoreManager scoreManager;
         public SwipeManager swipeController;
         public ItemManager itemManager;
+        public GameObject dialogueSystem;
 
-        private void Start()
+        public void StartLevel()
         {
-            StartLevel();
-        }
-
-        private void StartLevel()
-        {
+            dialogueSystem.SetActive(false);
+            
             characterManager.LoadRandomCharacter();
             var items = itemManager.GenerateItemsForCharacter(characterManager.CurrentCharacter);
 
