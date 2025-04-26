@@ -1,4 +1,6 @@
-﻿using ScriptableObjects;
+﻿using System;
+using GameUI;
+using ScriptableObjects;
 using UI.StateSwitcher;
 using UnityEngine;
 using Utils;
@@ -13,11 +15,16 @@ namespace Managers
         public ItemManager itemManager;
         public CompositeStateSwitcher gameUISwitcher;
 
+        public void Start()
+        {
+            characterManager.LoadRandomCharacter();
+            gameUISwitcher.ChangeState("Start");
+            DialogueManager.Instance.SetupCharacterData(characterManager.CurrentCharacter);
+        }
+
         public void StartLevel()
         {
             gameUISwitcher.ChangeState("Running");
-            
-            characterManager.LoadRandomCharacter();
             var items = itemManager.GenerateItemsForCharacter(characterManager.CurrentCharacter);
 
             swipeController.ShowItems(items);
