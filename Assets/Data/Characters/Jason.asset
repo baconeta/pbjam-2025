@@ -35,6 +35,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d98311a060d1cf247a843a1bf18649be, type: 2}
   dislikedTags:
   - food
+  - office
   minimumGoodItems: 1
   maximumGoodItems: 2
   minimumBadItems: 2
