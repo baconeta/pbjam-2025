@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using CustomEditor;
 using ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,8 +11,8 @@ namespace Managers
     /// </summary>
     public class ScoreManager : Utils.Singleton<ScoreManager>
     {
-        public int score = 0;
-        public UnityEvent<int> onScoreProcessed;
+        [ReadOnly] public int score = 0;
+        [ReadOnly] public UnityEvent<int> onScoreProcessed;
         
         private ScoringData _scoringData;
 

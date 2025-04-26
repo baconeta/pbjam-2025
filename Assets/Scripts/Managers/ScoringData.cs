@@ -12,13 +12,13 @@ namespace Managers
         public float scoreLostForKeepingNeutralItem = 5;
         public float scoreGainedForDiscardingNeutralItem = 2;
         
-        [Header("Time multiplier scoring variables")]
+        [Header("Time Multiplier scoring variables")]
         public float maxTimeMultiplier = 5f;
         public float minTimeMultiplier = 0.8f;
         public float timeToMin = 8f;
         public float timeMultiplierCurveStrength = 2f;
 
-        [Header("Overall multiplier for funner big numbers")]
+        [Header("Overall Multiplier for funner big numbers")]
         public float overallMultiplier = 1f;
 
         [Header("Other variables")] 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CustomEditor;
 using GameObjects;
 using GameUI;
 using ScriptableObjects;
@@ -11,12 +12,12 @@ namespace Managers
 {
     public class SwipeManager : Singleton<SwipeManager>
     {
-        public UnityEvent<Item, bool> onItemSwiped;
+        [ReadOnly] public UnityEvent<Item, bool> onItemSwiped;
         public GameObject defaultItemCardObject;
         public GameObject instantiationParent;
         
         private float _timeItemFirstShown;
-        public int totalItemsInThisRound;
+        [ReadOnly] public int totalItemsInThisRound;
         private Queue<Item> _itemQueue;
         
         // ReSharper disable once InconsistentNaming
