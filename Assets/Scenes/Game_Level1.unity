@@ -1042,7 +1042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &541984283
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1291,7 +1291,7 @@ MonoBehaviour:
   onItemSwiped:
     m_PersistentCalls:
       m_Calls: []
-  defaultItemCardObject: {fileID: 6491041727875271874, guid: d2466fa6e41e19641a2d793b533c86f5, type: 3}
+  defaultItemCardObject: {fileID: 6491041727875271874, guid: a040763bf36cee24f945ba14ba3fb8d2, type: 3}
   instantiationParent: {fileID: 335590822}
   totalItemsInThisRound: 0
 --- !u!1 &687513917
@@ -2176,7 +2176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1693945749
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2524,7 +2524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8490566, g: 0.54067284, b: 0.54067284, a: 1}
+  m_Color: {r: 0.50980395, g: 0.17254902, b: 0.8784314, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2609,7 +2609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateChangers:
   - {fileID: 1863143757}
-  index: 2
+  index: 1
 --- !u!1 &1878101243
 GameObject:
   m_ObjectHideFlags: 0
