@@ -13,7 +13,7 @@ namespace GameUI
 
         public void SetupCharacterData(CharacterData character)
         {
-            if (characterImage != null) characterImage.sprite = character.characterPortrait?.sprite;
+            if (characterImage != null) characterImage.sprite = character.characterPortrait;
             if (characterName != null) characterName.text = character.characterName;
             if (characterMarieText != null) characterMarieText.text = character.aboutMeToMarie;
         }
