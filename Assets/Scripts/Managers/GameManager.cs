@@ -1,5 +1,4 @@
-﻿using System;
-using Audio;
+﻿using Audio;
 using GameUI;
 using ScriptableObjects;
 using UI.StateSwitcher;

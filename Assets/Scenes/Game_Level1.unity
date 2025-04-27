@@ -939,6 +939,7 @@ MonoBehaviour:
   scoreText: {fileID: 337875665}
   highscoreText: {fileID: 141753061}
   newHighscore: {fileID: 1501788539}
+  levelNumber: 1
 --- !u!1 &541984282
 GameObject:
   m_ObjectHideFlags: 0
