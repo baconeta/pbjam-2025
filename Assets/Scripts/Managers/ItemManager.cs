@@ -16,6 +16,7 @@ namespace Managers
             List<Item> joySparksItems = character.likedItems;
             List<Item> joyNoSparksItems = character.hatedItems;
             List<Item> joyNoSparksTags = genericItemPool.Where(i => i.tags.Any(t => character.dislikedTags.Contains(t))).ToList();
+            List<Item> generics = genericItemPool.Where(i => i.tags.Any(t => character.dislikedTags.Contains(t))).ToList();
 
             var mixed = new List<Item>();
             
@@ -26,6 +27,8 @@ namespace Managers
                 Random.Range(character.minimumBadItems, character.maximumBadItems + 1)));
             mixed.AddRange(joyNoSparksTags.OrderBy(x => Random.value).Take(
                 Random.Range(0, character.maxDislikedTaggedItems + 1)));
+            mixed.AddRange(genericItemPool.OrderBy(x => Random.value).Take(
+                Random.Range(character.minGenericsToTake, character.maxGenericsToTake + 1)));
             Debug.Log("Successfully setup items for level");
             return mixed.OrderBy(x => Random.value).ToList(); // Shuffle
         }

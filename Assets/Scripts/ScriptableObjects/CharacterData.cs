@@ -38,5 +38,9 @@ namespace ScriptableObjects
         public int maximumBadItems;
         [Tooltip("MaxDislikedTaggedItems")]
         public int maxDislikedTaggedItems;
+        [Tooltip("Minimum Generic Items to Take")]
+        public int minGenericsToTake;
+        [Tooltip("Maximum Generic Items to Take")]
+        public int maxGenericsToTake;
     }
 }

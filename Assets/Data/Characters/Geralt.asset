@@ -41,3 +41,5 @@ MonoBehaviour:
   minimumBadItems: 1
   maximumBadItems: 2
   maxDislikedTaggedItems: 0
+  minGenericsToTake: 2
+  maxGenericsToTake: 3
