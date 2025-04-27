@@ -31,7 +31,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e9dec554230bc3545b194413a5ba8c82, type: 2}
   - {fileID: 11400000, guid: e4030dfb13aa23844b9d24b496766f4a, type: 2}
   hatedItems:
-  - {fileID: 11400000, guid: f51b1ff768106f94c81bc962ba61b8c3, type: 2}
+  - {fileID: 11400000, guid: 5b967225cf7028d419910ed44d6078b7, type: 2}
   - {fileID: 11400000, guid: 5778bd65b4116024fb0368407e5d0386, type: 2}
   dislikedTags:
   - Colourful

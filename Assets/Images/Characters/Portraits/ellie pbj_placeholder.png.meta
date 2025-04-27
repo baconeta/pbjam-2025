@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ellie pbj_placeholder_0: 31076100404179661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

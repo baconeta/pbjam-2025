@@ -31,8 +31,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cb69e0e094937d4087404fe2e7fc3e3, type: 2}
   - {fileID: 11400000, guid: 5330c8e865ff70b43885eef512ca2e5e, type: 2}
   hatedItems:
-  - {fileID: 11400000, guid: 827ea97444b8482489fae5926c1ac5d2, type: 2}
-  - {fileID: 11400000, guid: 7a12f5e447b99c443880c22988c24878, type: 2}
+  - {fileID: 11400000, guid: e9dec554230bc3545b194413a5ba8c82, type: 2}
+  - {fileID: 11400000, guid: 82ba68169fb2c1d4ab2092ab41623baf, type: 2}
   dislikedTags:
   - 
   minimumGoodItems: 2
