@@ -37,19 +37,20 @@ namespace Managers
         /// <param name="clip">The audio clip to play.</param>
         /// <param name="mixerGroup">The mixer group to route the audio through.</param>
         /// <param name="looping">Should the clip loop?</param>
+        /// <param name="volume">Default audio volume</param>
         /// <param name="presetAudioSource">Optional. A specific CustomAudioSource to use (e.g. for UI sounds).</param>
         /// <returns>A reference to the CustomAudioSource playing the sound.</returns>
-        public CustomAudioSource Play(AudioClip clip, AudioMixerGroup mixerGroup, bool looping = true, CustomAudioSource presetAudioSource = null)
+        public CustomAudioSource Play(AudioClip clip, AudioMixerGroup mixerGroup, bool looping = true, float volume = 1f, CustomAudioSource presetAudioSource = null)
         {
             CustomAudioSource audioSource = presetAudioSource ? presetAudioSource : Setup(mixerGroup, looping);
 
             if (looping)
             {
-                audioSource.PlayLooping(clip);
+                audioSource.PlayLooping(clip, volume);
             }
             else
             {
-                audioSource.PlayOnce(clip);
+                audioSource.PlayOnce(clip, volume);
             }
 
             return audioSource;

@@ -43,7 +43,7 @@ namespace Audio
             CustomAudioSource audioSource = null;
             if (_soundDict.TryGetValue(soundName, out SoundData sound))
             {
-                audioSource = AudioManager.Instance.Play(sound.sound, sound.mixer, sound.loop);
+                audioSource = AudioManager.Instance.Play(sound.sound, sound.mixer, sound.loop, sound.volume);
             }
             else
             {
@@ -61,7 +61,7 @@ namespace Audio
             CustomAudioSource audioSource = null;
             if (_soundDict.TryGetValue(soundName, out SoundData sound))
             {
-                audioSource = AudioManager.Instance.Play(sound.sound, sound.mixer, sound.loop, customAudioSource);
+                audioSource = AudioManager.Instance.Play(sound.sound, sound.mixer, sound.loop, sound.volume, customAudioSource);
             }
             else
             {
