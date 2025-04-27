@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Geralt
   m_EditorClassIdentifier: 
   characterName: Geralt
-  characterPortrait: {fileID: -4096388287310507375, guid: 4778b4a4f9110134b9e50a6c9d5d88a5, type: 3}
+  characterPortrait: {fileID: -8300310532752740856, guid: d26db75870d0204469ee637466dda8ba, type: 3}
   age: 29
   gender: Male
   bio: Has kids, loves gaming

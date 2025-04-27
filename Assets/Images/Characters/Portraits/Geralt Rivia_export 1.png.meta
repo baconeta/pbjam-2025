@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fb73d7f76ce945748b73480d5adcdb63
+guid: d26db75870d0204469ee637466dda8ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 31076100404179661
-    second: ellie pbj_placeholder_0
+      213: -8300310532752740856
+    second: Geralt Rivia_export 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ellie pbj_placeholder_0
+      name: Geralt Rivia_export 1_0
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 972
-        height: 3179
+        x: 42
+        y: 137
+        width: 1185
+        height: 2317
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc278957c876e6000800000000000000
-      internalID: 31076100404179661
+      spriteID: 80ee6d12c8f5fcc80800000000000000
+      internalID: -8300310532752740856
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ellie pbj_placeholder_0: 31076100404179661
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

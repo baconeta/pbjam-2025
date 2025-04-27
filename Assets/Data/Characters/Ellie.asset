@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ellie
   m_EditorClassIdentifier: 
   characterName: Ellie
-  characterPortrait: {fileID: 31076100404179661, guid: fb73d7f76ce945748b73480d5adcdb63, type: 3}
+  characterPortrait: {fileID: 7872058941731675189, guid: cb71f0df9439d714f97329ed1003ef43, type: 3}
   age: 19
   gender: Female
   bio: Loves art, Gothic

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rosalina
   m_EditorClassIdentifier: 
   characterName: Rosalina
-  characterPortrait: {fileID: 557232538145941845, guid: 7d91ace58824a2240bdfa174ff3a5bf7, type: 3}
+  characterPortrait: {fileID: 1648894714570770878, guid: d35250cdafa53db4aadbb94a67c90c24, type: 3}
   age: 65
   gender: female
   bio: 'Hippie loves, natural herbs '
