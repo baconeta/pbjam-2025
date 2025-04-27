@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d0a1b8674438d409b486fa730deff8, type: 3}
   m_Name: Pill bottle
   m_EditorClassIdentifier: 
-  itemName: 
-  icon: {fileID: 0}
+  itemName: Pill bottle
+  icon: {fileID: 21300000, guid: 1eaf836773c061146bd9d52fc66abb17, type: 3}
   tags: []

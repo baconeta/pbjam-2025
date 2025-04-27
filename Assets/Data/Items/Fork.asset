@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d0a1b8674438d409b486fa730deff8, type: 3}
   m_Name: Fork
   m_EditorClassIdentifier: 
-  itemName: 
-  icon: {fileID: 0}
+  itemName: Garden Fork
+  icon: {fileID: 21300000, guid: b9f1673b064836f48b8e81231c94e7c8, type: 3}
   tags: []

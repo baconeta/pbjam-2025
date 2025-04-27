@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Art supplies
   m_EditorClassIdentifier: 
   itemName: Art supplies
-  icon: {fileID: 180202009689299234, guid: 35c73df88f297d84fbe5619ef58261ab, type: 3}
+  icon: {fileID: 21300000, guid: 35c73df88f297d84fbe5619ef58261ab, type: 3}
   tags: []

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d0a1b8674438d409b486fa730deff8, type: 3}
   m_Name: Picture frame
   m_EditorClassIdentifier: 
-  itemName: 
-  icon: {fileID: 0}
+  itemName: Picture Frame
+  icon: {fileID: 21300000, guid: 5d16b6f171d045542a739e793dddfa3d, type: 3}
   tags: []

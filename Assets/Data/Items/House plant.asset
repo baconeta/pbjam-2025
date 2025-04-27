@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: House plant
   m_EditorClassIdentifier: 
   itemName: 'House plant '
-  icon: {fileID: 906388131340123023, guid: 200736fd3913e4a47b38ff4996a6e02a, type: 3}
+  icon: {fileID: 21300000, guid: 200736fd3913e4a47b38ff4996a6e02a, type: 3}
   tags: []

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PS1
   m_EditorClassIdentifier: 
   itemName: PS1
-  icon: {fileID: 1560148387825864636, guid: 4fea2b4388382c247872a56a13b7f547, type: 3}
+  icon: {fileID: 21300000, guid: 4fea2b4388382c247872a56a13b7f547, type: 3}
   tags: []
