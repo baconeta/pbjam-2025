@@ -33,7 +33,9 @@ MonoBehaviour:
   hatedItems:
   - {fileID: 11400000, guid: f51b1ff768106f94c81bc962ba61b8c3, type: 2}
   - {fileID: 11400000, guid: 5778bd65b4116024fb0368407e5d0386, type: 2}
-  dislikedTags: []
+  dislikedTags:
+  - Colourful
+  - Working out
   minimumGoodItems: 2
   maximumGoodItems: 3
   minimumBadItems: 1
