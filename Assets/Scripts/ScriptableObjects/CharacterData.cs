@@ -10,7 +10,7 @@ namespace ScriptableObjects
     {
         [Header("Character Info")]
         public string characterName;
-        public Image characterPortrait;
+        public Sprite characterPortrait;
         public int age;
         public string gender;
         [TextArea(3,10)] public string bio;

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 473de5dff469ab64b8efef9d219e00a5
+guid: 4778b4a4f9110134b9e50a6c9d5d88a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8433845063711005578
-    second: Rolls 1_0
+      213: -4096388287310507375
+    second: Geralt Rivia_export_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rolls 1_0
+      name: Geralt Rivia_export_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 166
-        width: 346
-        height: 196
+        x: 42
+        y: 137
+        width: 1185
+        height: 2317
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 674e2d65996f4fa80800000000000000
-      internalID: -8433845063711005578
+      spriteID: 19259c86e84b627c0800000000000000
+      internalID: -4096388287310507375
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rolls 1_0: -8433845063711005578
+      Geralt Rivia_export_0: -4096388287310507375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

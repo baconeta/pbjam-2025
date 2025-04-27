@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e1e43b7e32e4eca459d6cc25c21fb72b
+guid: fb73d7f76ce945748b73480d5adcdb63
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1755888850900523647
-    second: Controller 1_0
+      213: 31076100404179661
+    second: ellie pbj_placeholder_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Controller 1_0
+      name: ellie pbj_placeholder_0
       rect:
         serializedVersion: 2
-        x: 73
-        y: 104
-        width: 374
-        height: 282
+        x: 128
+        y: 64
+        width: 972
+        height: 3179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1856109a464d1a7e0800000000000000
-      internalID: -1755888850900523647
+      spriteID: dc278957c876e6000800000000000000
+      internalID: 31076100404179661
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Controller 1_0: -1755888850900523647
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Baby blanket
   m_EditorClassIdentifier: 
   itemName: Baby blanket
-  icon: {fileID: 2663058077136039164, guid: 5a433b0e98a4b1b4aadd44e3f13326d4, type: 3}
+  icon: {fileID: 21300000, guid: c47d5b4fea9d91847ad3a0de0cfcc3c8, type: 3}
   tags: []

@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Ellie
   m_EditorClassIdentifier: 
   characterName: Ellie
-  characterPortrait: {fileID: 0}
+  characterPortrait: {fileID: 31076100404179661, guid: fb73d7f76ce945748b73480d5adcdb63, type: 3}
   age: 19
   gender: Female
   bio: Loves art, Gothic
   hobbies: Art
-  aboutMeToMarie: "Hi! I\u2019m Ellie, I\u2019m 19.\r\n I like things that grow quietly...
-    and things that leave a mark.\r\n My space? It\u2019s full of color, texture,
-    and a little wildness.\r\n Feels like home. \r\nI genuinely gravitate toward
-    shadows and stillness, avoiding places that pulsed with energy or demanded too
-    much movement.\r\n"
+  aboutMeToMarie: "Hi! I\u2019m Ellie, I\u2019m 19.\n\r\nI like things that grow
+    quietly... and things that leave a mark.\n\r\nMy space? It\u2019s full of color,
+    texture, and a little wildness.\r\nFeels like home. \r\n\nI genuinely gravitate
+    toward shadows and stillness, avoiding places that pulsed with energy or demanded
+    too much movement.\r\n"
   funFact: 
   nicknames: 
   likedItems:

@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Geralt
   m_EditorClassIdentifier: 
   characterName: Geralt
-  characterPortrait: {fileID: 0}
+  characterPortrait: {fileID: -4096388287310507375, guid: 4778b4a4f9110134b9e50a6c9d5d88a5, type: 3}
   age: 29
   gender: Male
   bio: Has kids, loves gaming
   hobbies: Gaming
   aboutMeToMarie: "Hey, I\u2019m Geralt. I\u2019m 29.\nMy days are split between
-    keeping up with little feet and staying strong enough to carry it all.\nNights?
+    keeping up with little feet and staying strong enough to carry it all.\n\nNights?
     That\u2019s when I unwind  lose myself in other worlds, just me and the screen.\nA
     few small things keep me grounded, but I\u2019ve never had much patience for
-    anything that clings, lingers, or weighs me down.\nI like my mind clear, my hands
-    free, and my focus sharp."
+    anything that clings, lingers, or weighs me down.\n\nI like my mind clear, my
+    hands free, and my focus sharp."
   funFact: 
   nicknames: 
   likedItems:
