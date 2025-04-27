@@ -1,4 +1,5 @@
 ﻿using System;
+using Audio;
 using GameUI;
 using ScriptableObjects;
 using UI.StateSwitcher;
@@ -34,6 +35,7 @@ namespace Managers
         private void HandleSwipe(Item item, bool kept)
         {
             scoreManager.ProcessChoice(item, kept, characterManager.CurrentCharacter);
+            AudioWrapper.Instance.PlaySoundVoid("item");
         }
 
         public void EndLevel()
