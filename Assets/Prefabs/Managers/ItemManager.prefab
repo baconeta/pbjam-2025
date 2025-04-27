@@ -44,4 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d9405f21194592a650cd6da4e405f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPool: []
+  genericItemPool:
+  - {fileID: 11400000, guid: c9274a5780ac56348bd98bd4f781f682, type: 2}
+  - {fileID: 11400000, guid: 2f2a95a51b36beb479c6a61d594c9724, type: 2}
+  - {fileID: 11400000, guid: c2c9585f3129e01489101642e64e85ff, type: 2}
+  - {fileID: 11400000, guid: 3304e0f76de6ceb458760580eef2e9fb, type: 2}
+  - {fileID: 11400000, guid: 3383f7b9a224d624e85a6d35655e9e75, type: 2}
+  - {fileID: 11400000, guid: 3ac8aa87fcc23dd41ac14881dd1c7545, type: 2}
+  - {fileID: 11400000, guid: 0720e5d2626e824459c6d286959c1a27, type: 2}
+  - {fileID: 11400000, guid: 046fd7f2657f9dc4d8daa24cdc4f386c, type: 2}
